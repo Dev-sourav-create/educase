@@ -1,12 +1,13 @@
-const defaultStyle = "w-full text-center h-[48px]";
+const defaultStyle =
+  "w-full text-center text-[16px] h-[46px] w-[335px] rounded-[6px] mb-2.5 font-medium";
 const variants = {
-  primary: "bg-[#6d25fe] text-white cursor-pointer",
+  primary: "bg-primaryBtn text-white cursor-pointer",
   secondary: "bg-[#cebafb] text-primary cursor-pointer",
   diabled: "bg-[#cacacb] text-white cursor-not-allowed",
 };
 
-export function Button({ btnName, diabled, type, category, className = "" }) {
-  const variantStyle = diabled
+export function Button({ btnName, disabled, type, category, className = "" }) {
+  const variantStyle = disabled
     ? variants.diabled
     : (variants[category] ?? variants.secondary);
 
@@ -14,7 +15,7 @@ export function Button({ btnName, diabled, type, category, className = "" }) {
     <button
       className={` ${variantStyle} ${defaultStyle} ${className}`}
       type={type}
-      disabled={diabled}
+      disabled={disabled}
     >
       {btnName}
     </button>

@@ -1,9 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-body: "#f6f8f8";
-  --color-primary: "#1c2227";
-  --color-secondary: "#75767b";
-  --color-blue: "#6e2afe";
-  --color-primaryBtn: "#6d25fe";
+  --color-body: #f7f8f9;
+  --color-primary: #1c2227;
+  --color-secondary: #75767b;
+  --color-blue: #6e2afe;
+  --color-primaryBtn: #6d25fe;
+  --color-label: #6c25ff;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #1c2227;
+}
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
 }
